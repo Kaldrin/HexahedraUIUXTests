@@ -57,6 +57,12 @@ public class RotateObjectByImageFillAmount : MonoBehaviour
         }
     }
 
+    private void Update()                                                                                                       // UPDATE
+    {
+        if (!notInPlayMode)
+            Rotate();
+    }
+
 
 
 

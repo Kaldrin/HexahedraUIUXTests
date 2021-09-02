@@ -52,6 +52,10 @@ public class CopyFillAmount : MonoBehaviour
                 imageToSetFillAmountOf.fillAmount = imageToCopyFillAmountFrom.fillAmount;
     }
 
+    private void Update()                                                                                                                       // UPDATE
+    {
+        DoCopyFillAmount();
+    }
 
 
 

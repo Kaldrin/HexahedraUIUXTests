@@ -31,6 +31,7 @@ public class TimeManager : MonoBehaviour
     bool playing = false;
     float elapsedTime = 0;
     [SerializeField] int framesPerStep = 30;
+    bool down = false;
 
 
     [Header("BUTTONS")]
@@ -45,6 +46,8 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Button undoButton = null;
     [SerializeField] Button redoHistoryButton = null;
     [SerializeField] Button undoHistoryButton = null;
+    [SerializeField] Button addReverseCommandLineButton = null;
+    [SerializeField] Button addCommandLineButton = null;
 
 
     [Header("GRAPHIC COMPONENTS")]
@@ -54,6 +57,9 @@ public class TimeManager : MonoBehaviour
     [SerializeField] GameObject outerWheel1 = null;
     [SerializeField] GameObject bgWheel = null;
     [SerializeField] TextMeshProUGUI stepsDisplayText = null;
+    [SerializeField] Animation timewheelAnimation = null;
+    [SerializeField] Animation timeLineAnimation = null;
+    [SerializeField] Animation mainBarAnimation = null;
 
 
 
@@ -76,6 +82,17 @@ public class TimeManager : MonoBehaviour
     public void Play()                                                                                                                                          // PLAY
     {
         playing = true;
+        if (!down)
+        {
+            if (timewheelAnimation)
+                timewheelAnimation.Play("TimeWheelDown", PlayMode.StopAll);
+            if (timeLineAnimation)
+                timeLineAnimation.Play("TimelineOn", PlayMode.StopAll);
+            if (mainBarAnimation)
+                mainBarAnimation.Play("MainBarOff", PlayMode.StopAll);
+        }
+        down = true;
+
 
 
         if (playButton)
@@ -106,9 +123,11 @@ public class TimeManager : MonoBehaviour
         StartCoroutine(PlayOneStepCoroutine(frames));
     }
 
+
     IEnumerator PlayOneStepCoroutine(int frames)                                                                                                        // PLAY ONE STEP COROUTINE
     {
         int cycles = framesPerStep;
+
 
         while (cycles > 0)
         {
@@ -136,15 +155,28 @@ public class TimeManager : MonoBehaviour
     }
 
 
-    void UpdateStepDisplay()                                                                                                                        // UPDATE STEP DISPLAY
+    void UpdateStepDisplay()                                                                                                                          // UPDATE STEP DISPLAY
     {
         if (stepsDisplayText)
             stepsDisplayText.text = Mathf.FloorToInt(elapsedTime / (framesPerStep * Time.fixedDeltaTime)).ToString();
     }
 
+
     public void Stop()                                                                                                                                  // STOP
     {
         playing = false;
+        // ANIM
+        if (down)
+        {
+            if (timewheelAnimation)
+                timewheelAnimation.Play("TimeWheelUp", PlayMode.StopAll);
+            if (timeLineAnimation)
+                timeLineAnimation.Play("TimelineOff", PlayMode.StopAll);
+            if (mainBarAnimation)
+                mainBarAnimation.Play("MainBarOn", PlayMode.StopAll);
+        }
+        down = false;
+
 
         if (stopButton)
             stopButton.interactable = false;
@@ -153,9 +185,11 @@ public class TimeManager : MonoBehaviour
         if (pauseButton)
             pauseButton.SetActive(false);
 
+
         StartCoroutine(Rewind());
         
     }
+
 
     IEnumerator Rewind()                                                                                                                                // REWIND
     {
@@ -187,6 +221,10 @@ public class TimeManager : MonoBehaviour
             redoHistoryButton.interactable = true;
         if (undoHistoryButton)
             undoHistoryButton.interactable = true;
+        if (addReverseCommandLineButton)
+            addReverseCommandLineButton.interactable = true;
+        if (addCommandLineButton)
+            addCommandLineButton.interactable = true;
 
 
         elapsedTime = 0;
