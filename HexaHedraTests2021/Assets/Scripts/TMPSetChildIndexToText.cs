@@ -22,6 +22,7 @@ public class TMPSetChildIndexToText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI tmpComponentToUpdate = null;
     [SerializeField] Transform transformToCheckForChildIndex = null;
+    [SerializeField] int startCountingAt = 0;
 
 
 
@@ -45,7 +46,7 @@ public class TMPSetChildIndexToText : MonoBehaviour
     private void OnDrawGizmos()                                                                                                         // ON DRAW GIZMOS
     {
         if (tmpComponentToUpdate && transformToCheckForChildIndex)
-            if (tmpComponentToUpdate.text != transformToCheckForChildIndex.GetSiblingIndex().ToString())
-                tmpComponentToUpdate.text = transformToCheckForChildIndex.GetSiblingIndex().ToString();
+            if (tmpComponentToUpdate.text != (transformToCheckForChildIndex.GetSiblingIndex() + startCountingAt).ToString())
+                tmpComponentToUpdate.text = (transformToCheckForChildIndex.GetSiblingIndex() + startCountingAt).ToString();
     }
 }
