@@ -36,8 +36,8 @@ public class TimeManager : MonoBehaviour
 
     [Header("BUTTONS")]
     [SerializeField] Button playStepButton = null;
-    [SerializeField] GameObject playButton = null;
-    [SerializeField] GameObject pauseButton = null;
+    [SerializeField] Button playButton = null;
+    [SerializeField] Button pauseButton = null;
     [SerializeField] Button speed1Button = null;
     [SerializeField] Button speed2Button = null;
     [SerializeField] Button speed3Button = null;
@@ -94,11 +94,12 @@ public class TimeManager : MonoBehaviour
         down = true;
 
 
-
+        /*
         if (playButton)
             playButton.SetActive(false);
         if (pauseButton)
             pauseButton.SetActive(true);
+            */
         if (stopButton)
             stopButton.interactable = true;
     }
@@ -108,11 +109,12 @@ public class TimeManager : MonoBehaviour
     {
         playing = false;
         timeSpeed = 1;
-
+        /*
         if (playButton)
             playButton.SetActive(true);
         if (pauseButton)
             pauseButton.SetActive(false);
+            */
     }
 
 
@@ -181,9 +183,9 @@ public class TimeManager : MonoBehaviour
         if (stopButton)
             stopButton.interactable = false;
         if (playButton)
-            playButton.SetActive(true);
+            playButton.interactable = false;
         if (pauseButton)
-            pauseButton.SetActive(false);
+            pauseButton.interactable = false;
 
 
         StartCoroutine(Rewind());
@@ -204,7 +206,9 @@ public class TimeManager : MonoBehaviour
         }
 
         if (playButton)
-            playButton.GetComponent<Button>().interactable = true;
+            playButton.interactable = true;
+        if (pauseButton)
+            pauseButton.interactable = false;
         if (playStepButton)
             playStepButton.GetComponent<Button>().interactable = true;
         if (speed1Button)
