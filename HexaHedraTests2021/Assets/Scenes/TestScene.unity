@@ -14899,6 +14899,8 @@ GameObject:
   - component: {fileID: 285193761}
   - component: {fileID: 285193760}
   - component: {fileID: 285193759}
+  - component: {fileID: 285193763}
+  - component: {fileID: 285193762}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -15006,6 +15008,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285193757}
   m_CullTransparentMesh: 0
+--- !u!114 &285193762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285193757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Switch tracks above
+  tooltipText: Makes the workstation switch to the track above.
+  tooltipKey: B
+--- !u!114 &285193763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285193757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 285193762}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 285193762}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &287562821
 GameObject:
   m_ObjectHideFlags: 0
@@ -15779,7 +15842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015869141, y: -0.0013046265}
+  m_AnchoredPosition: {x: 0.0015869141, y: -0.0012817383}
   m_SizeDelta: {x: 0.024902344, y: 0.020812988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301267539
@@ -17463,6 +17526,8 @@ GameObject:
   - component: {fileID: 329686456}
   - component: {fileID: 329686455}
   - component: {fileID: 329686454}
+  - component: {fileID: 329686458}
+  - component: {fileID: 329686457}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -17570,6 +17635,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329686452}
   m_CullTransparentMesh: 0
+--- !u!114 &329686457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329686452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 329686458}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 329686458}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &329686458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329686452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Debug
+  tooltipText: Makes the factory pause when triggered. Helps with debugging solutions.
+  tooltipKey: P
 --- !u!1 &330192406
 GameObject:
   m_ObjectHideFlags: 0
@@ -23310,7 +23436,7 @@ RectTransform:
   - {fileID: 2062380633}
   - {fileID: 1630740}
   m_Father: {fileID: 2104526457}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27274,6 +27400,8 @@ GameObject:
   - component: {fileID: 529426052}
   - component: {fileID: 529426051}
   - component: {fileID: 529426050}
+  - component: {fileID: 529426054}
+  - component: {fileID: 529426053}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -27381,6 +27509,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529426048}
   m_CullTransparentMesh: 0
+--- !u!114 &529426053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529426048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Sync above
+  tooltipText: Makes the workstation pause until the workstation below runs the opposite
+    sync.
+  tooltipKey: C
+--- !u!114 &529426054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529426048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 529426053}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 529426053}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &533351668
 GameObject:
   m_ObjectHideFlags: 0
@@ -30934,7 +31124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610724297}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -30947,7 +31137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4bea460e822b48f488ae915c5bd69ab4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a21d90f917548641ac8124d35136df1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34923,7 +35113,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2104526457}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -40453,8 +40643,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 439, y: -149}
-  m_SizeDelta: {x: 495.9204, y: 135.70773}
+  m_AnchoredPosition: {x: 439, y: -160.8}
+  m_SizeDelta: {x: 495.9204, y: 159.37936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806600383
 MonoBehaviour:
@@ -43550,7 +43740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015869141, y: -0.001411438}
+  m_AnchoredPosition: {x: 0.0015869141, y: -0.0014038086}
   m_SizeDelta: {x: 0.024902344, y: 0.020568848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873662828
@@ -44542,6 +44732,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883956099}
   m_CullTransparentMesh: 0
+--- !u!1 &884793279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884793280}
+  - component: {fileID: 884793282}
+  - component: {fileID: 884793281}
+  m_Layer: 5
+  m_Name: Shadow01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &884793280
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884793279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2104526457}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 280, y: -189}
+  m_SizeDelta: {x: 849.1981, y: 473.73474}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &884793281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884793279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70b19d9f0ac674c47addf11dad47d697, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &884793282
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884793279}
+  m_CullTransparentMesh: 0
 --- !u!1 &889679653
 GameObject:
   m_ObjectHideFlags: 0
@@ -44554,6 +44819,8 @@ GameObject:
   - component: {fileID: 889679657}
   - component: {fileID: 889679656}
   - component: {fileID: 889679655}
+  - component: {fileID: 889679659}
+  - component: {fileID: 889679658}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -44661,6 +44928,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889679653}
   m_CullTransparentMesh: 0
+--- !u!114 &889679658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889679653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 889679659}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 889679659}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &889679659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889679653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Sync right
+  tooltipText: Makes the workstation pause until the right workstation runs the opposite
+    sync.
+  tooltipKey: X
 --- !u!1 &889826004
 GameObject:
   m_ObjectHideFlags: 0
@@ -47168,7 +47497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015869141, y: -0.0015411377}
+  m_AnchoredPosition: {x: 0.0015869141, y: -0.0015258789}
   m_SizeDelta: {x: 0.024902344, y: 0.020874023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952311423
@@ -49573,6 +49902,8 @@ GameObject:
   - component: {fileID: 993931489}
   - component: {fileID: 993931488}
   - component: {fileID: 993931487}
+  - component: {fileID: 993931491}
+  - component: {fileID: 993931490}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -49680,6 +50011,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993931485}
   m_CullTransparentMesh: 0
+--- !u!114 &993931490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993931485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Reverse track direction
+  tooltipText: Makes the track flip direction when encountered
+  tooltipKey: '?'
+--- !u!114 &993931491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993931485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 993931490}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 993931490}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &998340955
 GameObject:
   m_ObjectHideFlags: 0
@@ -49692,6 +50084,8 @@ GameObject:
   - component: {fileID: 998340959}
   - component: {fileID: 998340958}
   - component: {fileID: 998340957}
+  - component: {fileID: 998340961}
+  - component: {fileID: 998340960}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -49799,6 +50193,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998340955}
   m_CullTransparentMesh: 0
+--- !u!114 &998340960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998340955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Set track backward
+  tooltipText: Makes the track a reverse track - nothing happens if it already is.
+  tooltipKey: /
+--- !u!114 &998340961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998340955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 998340960}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 998340960}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1001082989
 GameObject:
   m_ObjectHideFlags: 0
@@ -49833,7 +50288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015869141, y: -0.0013046265}
+  m_AnchoredPosition: {x: 0.0015869141, y: -0.0012817383}
   m_SizeDelta: {x: 0.024902344, y: 0.020751953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1001082991
@@ -58404,7 +58859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0017700195, y: 0.009475708}
+  m_AnchoredPosition: {x: 0.0017700195, y: 0.009460449}
   m_SizeDelta: {x: 0.024902344, y: 0.012390137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192042962
@@ -61474,7 +61929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015869141, y: 0.0018463135}
+  m_AnchoredPosition: {x: 0.0015869141, y: 0.0018310547}
   m_SizeDelta: {x: 0.024902344, y: 0.0140686035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270970504
@@ -63197,7 +63652,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315965099}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -63210,7 +63665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64916a5ebc8bcd54bbae334b7d2e0806, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3299796d51428b428ae4f591f9816af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -63359,6 +63814,8 @@ GameObject:
   - component: {fileID: 1327976875}
   - component: {fileID: 1327976874}
   - component: {fileID: 1327976873}
+  - component: {fileID: 1327976876}
+  - component: {fileID: 1327976877}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -63466,6 +63923,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327976871}
   m_CullTransparentMesh: 0
+--- !u!114 &1327976876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327976871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Set track forward
+  tooltipText: Makes the track a forward track - northing happens if it already is
+  tooltipKey: .
+--- !u!114 &1327976877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327976871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1327976876}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1327976876}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1328441548
 GameObject:
   m_ObjectHideFlags: 0
@@ -69585,7 +70103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499270079}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -69598,7 +70116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0683e8263cba51c40a71ba48010ae418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 136e56a2060925a4595d2a8bdc63966e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -69836,6 +70354,8 @@ GameObject:
   - component: {fileID: 1508902678}
   - component: {fileID: 1508902677}
   - component: {fileID: 1508902676}
+  - component: {fileID: 1508902680}
+  - component: {fileID: 1508902679}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -69943,6 +70463,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508902674}
   m_CullTransparentMesh: 0
+--- !u!114 &1508902679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508902674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1508902680}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1508902680}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1508902680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508902674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Sync below
+  tooltipText: Makes the workstation pause until the workstation below runs the opposite
+    sync.
+  tooltipKey: V
 --- !u!1 &1510026387
 GameObject:
   m_ObjectHideFlags: 0
@@ -77632,6 +78214,8 @@ GameObject:
   - component: {fileID: 1672277081}
   - component: {fileID: 1672277080}
   - component: {fileID: 1672277079}
+  - component: {fileID: 1672277083}
+  - component: {fileID: 1672277082}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -77739,6 +78323,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672277077}
   m_CullTransparentMesh: 0
+--- !u!114 &1672277082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672277077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1672277083}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1672277083}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1672277083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672277077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Switch track below
+  tooltipText: Makes the workstation switch to the track below.
+  tooltipKey: N
 --- !u!1 &1674466855
 GameObject:
   m_ObjectHideFlags: 0
@@ -87911,16 +88556,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898166309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.00038553774}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 819087004}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.956}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4, y: -14.5}
+  m_AnchoredPosition: {x: 0.39994812, y: -14.500008}
   m_SizeDelta: {x: 48.2762, y: 48.2762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898166311
@@ -87930,7 +88575,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898166309}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -87943,7 +88588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2991c41fbdf3a6c458ebb07b9af05cf1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 136e56a2060925a4595d2a8bdc63966e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88127,6 +88772,8 @@ GameObject:
   - component: {fileID: 1904798571}
   - component: {fileID: 1904798570}
   - component: {fileID: 1904798569}
+  - component: {fileID: 1904798573}
+  - component: {fileID: 1904798572}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -88234,6 +88881,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904798567}
   m_CullTransparentMesh: 0
+--- !u!114 &1904798572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba6f6f25d07fc40b89892b0b12a318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipObject: {fileID: 806600383}
+  tooltipTitle: Sync left
+  tooltipText: Makes the workstation pause until the left workstation runs the opposite
+    sync.
+  tooltipKey: Z
+--- !u!114 &1904798573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1904798572}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1904798572}
+          m_TargetAssemblyTypeName: TooltipInvoker, Assembly-CSharp
+          m_MethodName: CallToolTip
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1905553214
 GameObject:
   m_ObjectHideFlags: 0
@@ -90625,7 +91334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015869141, y: -0.001663208}
+  m_AnchoredPosition: {x: 0.0015869141, y: -0.0016479492}
   m_SizeDelta: {x: 0.024902344, y: 0.02130127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939691395
@@ -99881,6 +100590,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.17259347, y: 0.17259347, z: 0.17259347}
   m_Children:
+  - {fileID: 884793280}
   - {fileID: 683914576}
   - {fileID: 449263016}
   m_Father: {fileID: 752263792}
