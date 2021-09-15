@@ -11,7 +11,7 @@ using TMPro;
 
 // Bastien BERNAND
 // Hexahera tests
-// Last edited 30.08.2021
+// Last edited 14.09.2021
 
 // REQUIREMENTS
 // TextMeshPro package
@@ -151,6 +151,8 @@ public class TimeManager : MonoBehaviour
             speed2Button.interactable = true;
         if (speed3Button)
             speed3Button.interactable = true;
+        if (stopButton)
+            stopButton.interactable = true;
 
 
         UpdateStepDisplay();
