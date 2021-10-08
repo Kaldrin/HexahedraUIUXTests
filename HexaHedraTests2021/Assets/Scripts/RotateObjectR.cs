@@ -9,13 +9,13 @@ using UnityEngine;
 
 // Bastien BERNAND
 // Reusable asset
-// Last edited on 05.10.2021
+// Last edited on 08.10.2021
 
 /// <summary>
 /// Rotates a transform in FixedUpdate by the indicated amounts.
 /// </summary>
 
-// Originally made for UNITY 2020..1.15f1
+// Originally made for UNITY 2020.1.15f1
 // Last tested on UNITY 2020.1.15f1
 public class RotateObjectR : MonoBehaviour
 {
@@ -26,14 +26,21 @@ public class RotateObjectR : MonoBehaviour
     [SerializeField] float xAmount = 0;
     [SerializeField] float yAmount = 0;
     [SerializeField] float zAmount = 1;
+    bool run = true;
 
 
 
 
 
     private void Start() => GetMissingReferences();                                                                                 // START
-    void FixedUpdate() => transformToRotate.Rotate(xAmount, yAmount, zAmount);                                                           // UPDATE
-
+    void FixedUpdate()                                                                                                              // FIXED UPATE
+    {
+        if (run)
+            transformToRotate.Rotate(xAmount, yAmount, zAmount);
+    }
+    public void Pause() => run = false;
+    public void SetState(bool state) => run = state;
+    public void Play() => run = true;
 
 
 

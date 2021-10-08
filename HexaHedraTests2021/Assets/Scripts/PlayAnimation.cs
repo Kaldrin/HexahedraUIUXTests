@@ -8,7 +8,7 @@ using UnityEngine;
 
 // Bastien BERNAND
 // Reusable asset
-// Last edited 24.08.2021
+// Last edited 07.10.2021
 
 /// <summary>
 /// Script to expose play animation functions from Animation components
@@ -36,6 +36,14 @@ public class PlayAnimation : MonoBehaviour
             for (int i = 0; i < animationComponentsToPLay.Count; i++)
                 if (animationComponentsToPLay[i] != null && animationComponentsToPLay[i].GetClip(animationName))
                     animationComponentsToPLay[i].Play(animationName, PlayMode.StopAll);
+    }
+
+    public void Stop()                                                                                                                                          // STOP
+    {
+        if (animationComponentsToPLay != null && animationComponentsToPLay.Count > 0)
+            for (int i = 0; i < animationComponentsToPLay.Count; i++)
+                if (animationComponentsToPLay[i] != null)
+                    animationComponentsToPLay[i].Stop();
     }
 
 }
