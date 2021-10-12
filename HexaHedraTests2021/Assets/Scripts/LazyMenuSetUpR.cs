@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 
 
 // Bastien BERNAND
 // Reusable asset
-// Last edited 08.10.2021
+// Last edited 12.10.2021
 
 /// <summary>
 /// This script is just to enable / disable the right menus on start. To put on the parent on the menus.
@@ -24,28 +22,32 @@ public class LazyMenuSetUpR : MonoBehaviour
 
 
 
-
+    void Start()
+    {}
 
     void Awake()                                                                                                                                    // AWAKE
     {
-        GetMissingComponents();
+        if (enabled && isActiveAndEnabled)
+        {
+            GetMissingComponents();
 
-        // Disable all menus
-        if (transform.childCount > 0)
-            for (int i = 0; i < transform.childCount; i++)
-                if (transform.GetChild(i).gameObject != null)
-                {
-                    GameObject menuObject = transform.GetChild(i).gameObject;
-                    if (menuObject.activeInHierarchy != false)
-                        menuObject.SetActive(false);
-                }
-                else
-                    Debug.Log("Problem with disabling the menu index " + " i");
+            // Disable all menus
+            if (transform.childCount > 0)
+                for (int i = 0; i < transform.childCount; i++)
+                    if (transform.GetChild(i).gameObject != null)
+                    {
+                        GameObject menuObject = transform.GetChild(i).gameObject;
+                        if (menuObject.activeInHierarchy != false)
+                            menuObject.SetActive(false);
+                    }
+                    else
+                        Debug.Log("Problem with disabling the menu index " + " i");
 
-        // Activate required menu
-        if (menuToActivateOnStart != null)
-            if (menuToActivateOnStart.activeInHierarchy != true)
-                menuToActivateOnStart.SetActive(true);
+            // Activate required menu
+            if (menuToActivateOnStart != null)
+                if (menuToActivateOnStart.activeInHierarchy != true)
+                    menuToActivateOnStart.SetActive(true);
+        }
     }
 
 
