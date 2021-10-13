@@ -19,7 +19,7 @@ using UnityEngine;
 
 // Originally made for UNITY 2020.1.15f1
 // Last tested on UNITY 2020.1.15f1
-public class CursorManager : MonoBehaviour
+public class CursorManagerR : MonoBehaviour
 {
     [SerializeField] CursorData defaultCursor = null;
     CursorData currentCursor = null;
