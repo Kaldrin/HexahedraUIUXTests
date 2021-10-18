@@ -6,18 +6,19 @@ using UnityEngine.SceneManagement;
 
 
 
+
+
 // Bastien BERNAND
 // Reusable asset
-// Last edited 26.08.2021
+// Last edited 14.10.2021
 
 // REQUIREMENTS
 // Old input system
 
 /// <summary>
-/// This script manages scene transitions and scene loading.
+/// This script manages scene transitions and scene loading with smooth animations.
 /// </summary>
 
-// OPTIMIZED I THINK ?
 // Originally made for Unity 2019.1.1f1
 // Last test on UNITY 2021.1.15f1
 public class SceneManage : MonoBehaviour
@@ -56,13 +57,8 @@ public class SceneManage : MonoBehaviour
 
     #region FUNCTIONS
     #region BASE FUNCTIONS
-    void Awake()
-    {
-        Instance = this;
-    }
-
-
-    void Start()
+    void Awake() => Instance = this;
+    void Start()                                                                                                                        // START
     {
         // If chosen, starts the coroutine that will load the indicated scene after the indicated duration
         if (autoLoadSceneAfterDuration)
@@ -70,7 +66,7 @@ public class SceneManage : MonoBehaviour
     }
 
 
-    void Update()
+    void Update()                                                                                                                           // UPDATE
     {
         if (isActiveAndEnabled && enabled)
         {
@@ -86,6 +82,7 @@ public class SceneManage : MonoBehaviour
                     Application.Quit();
                 else if (canLoadScene)
                 {
+                    Debug.Log(sceneToLoad.name);
                     canLoadScene = false;
                     LoadScene(sceneToLoad);
                 }
@@ -100,7 +97,7 @@ public class SceneManage : MonoBehaviour
 
     // SCENE LOADING
     // Automaticly loads the indicated scene after the indicated duration, without transition animation
-    IEnumerator AutoLoadSceneAfterDuration()
+    IEnumerator AutoLoadSceneAfterDuration()                                                                                        // AUTO LOAD SCENE AFTER DURATION
     {
         yield return new WaitForSecondsRealtime(durationBeforeAutoLoadScene);
 
@@ -108,37 +105,34 @@ public class SceneManage : MonoBehaviour
         SceneManager.LoadSceneAsync(sceneToAutoLoadIndex);
     }
 
-
-    void LoadScene(Scene scene)
+    public void LoadScene(Scene scene) => SceneManager.LoadSceneAsync(scene.name);
+    public void SetLoadSceneViaIndex(int index)                                                                                         // SETR LOAD SCENE VIA INDEX
     {
-        SceneManager.LoadSceneAsync(scene.name);
+        sceneToLoad = SceneManager.GetSceneByBuildIndex(index);
+        sceneSwitchAnimator.SetTrigger(sceneExitAnimatorParameterName);
+    }
+    public void SetLoadSceneViaName(string name)
+    {
+        sceneToLoad = SceneManager.GetSceneByName(name);
+        sceneSwitchAnimator.SetTrigger(sceneExitAnimatorParameterName);
     }
 
-
     // Set which scene should be loaded after the close scene anim
-    public void SetLoadScene(Scene scene)
+    public void SetLoadScene(Scene scene)                                                                                               // SET LOAD SCENE
     {
         sceneToLoad = scene;
         sceneSwitchAnimator.SetTrigger(sceneExitAnimatorParameterName);
     }
 
+    /// <summary>
+    /// Triggers the restart of the current scene, called by the restart inputs
+    /// </summary>
+    public void Restart() => SetLoadScene(SceneManager.GetActiveScene());
 
-    // Triggers the restart of the current scene, called by the restart inputs
-    public void Restart()
-    {
-        SetLoadScene(SceneManager.GetActiveScene());
-    }
-
-
-
-
-
-
-
-
-    // QUIT
-    // Sets the instruction to quit the game after after the close scene anim
-    public void Quit()
+    /// <summary>
+    /// // Sets the instruction to quit the game after after the close scene anim
+    /// </summary>
+    public void Quit()                                                                                                                  // QUIT
     {
         SetLoadScene(new Scene());
         quit = true;
@@ -148,22 +142,18 @@ public class SceneManage : MonoBehaviour
 
 
 
-
-
-
-
     // SECONDARY
-    // Checks if the given keys are being pressed
+    /// <summary>
+    /// Checks if the given keys are being pressed
+    /// </summary>
+    /// <param name="keys">The list of keys to press</param>
+    /// <returns>Returns if the keys have been pressed</returns>
     bool CheckIfAllKeysPressed(KeyCode[] keys)
     {
         bool notPressed = false;
-
-
         for (int i = 0; i < keys.Length; i++)
             if (!Input.GetKey(keys[i]))
                 notPressed = true;
-
-
         return !notPressed;
     }
     #endregion
