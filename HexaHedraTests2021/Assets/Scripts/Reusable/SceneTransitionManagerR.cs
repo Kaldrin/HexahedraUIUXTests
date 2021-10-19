@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 // Bastien BERNAND
 // Reusable asset
 // Last edited 19.10.2021
+// Clean organized and optimzed
 
 /// <summary>
 /// Manages scene loading, transitions & animations. To place on a Canvas dedicated to scene transitions.
@@ -38,11 +39,20 @@ public class SceneTransitionManagerR : MonoBehaviour
     {
         GetMissingReferences();
         sceneToLoadIndex = index;
-
         // ANIMATION
         PlayQuitAnimation();
     }
 
+
+    /// <summary>
+    /// Quits the game, using the transition animation and the index -1 which <see cref="ProceedToLoadScene"/> will understand as quit the game.
+    /// </summary>
+    public void QuitGame()
+    {
+        sceneToLoadIndex = -1;
+        // ANIMATION
+        PlayQuitAnimation();
+    }
     /// <summary>
     /// Restarts the current scene if all referenced keys of <see cref="keysToRestart"/>are pressed.
     /// </summary>
@@ -51,15 +61,19 @@ public class SceneTransitionManagerR : MonoBehaviour
     /// Immediately starts to load the scene of <see cref="sceneToLoadIndex"/> asynchronously. Usually shouldn't be called manually but rathered called by the quit animation of <see cref="animationComponentToUse"/>
     /// </summary>
     void ProceedToLoadScene() => StartCoroutine(ProceedToLoadSceneAsync());
-
     /// <summary>
     /// Coroutine used by <see cref="ProceedToLoadScene"/>
     /// </summary>
     IEnumerator ProceedToLoadSceneAsync()
     {
-        AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneToLoadIndex, LoadSceneMode.Single);
-        while (!asyncOp.isDone)
-            yield return null;
+        if (sceneToLoadIndex == -1)
+            Application.Quit();
+        else
+        {
+            AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneToLoadIndex, LoadSceneMode.Single);
+            while (!asyncOp.isDone)
+                yield return null;
+        }
     }
 
     /// <summary>
@@ -70,6 +84,8 @@ public class SceneTransitionManagerR : MonoBehaviour
         if (animationComponentToUse)
             animationComponentToUse.Play(quitSceneAnimationName, PlayMode.StopAll);
     }
+    
+
 
 
 
