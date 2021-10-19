@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 using UnityEngine.EventSystems;
 
@@ -9,7 +7,7 @@ using UnityEngine.EventSystems;
 
 // Bastien BERNAND
 // Reusable asset
-// Last edited 18.10.2021
+// Last edited 19.10.2021
 
 /// <summary>
 /// This script serves the specific function of disabling the EventTrigger component of a component on Start, as it's not a serialized property.
@@ -25,14 +23,20 @@ public class DisableEventTriggerR : MonoBehaviour
 
 
 
-    void Start()
+    void Start()                                                                                                        // START
     {
         GetMissingComponents();
         if (eventTriggerToDisable)
             eventTriggerToDisable.enabled = false;
     }
 
-    void GetMissingComponents()
+
+
+    // EDITOR
+    /// <summary>
+    /// Automatically assigns missing components.
+    /// </summary>
+    void GetMissingComponents()                                                                                         // GET MISSING COMPONENTS
     {
         if (!eventTriggerToDisable && GetComponent<EventTrigger>())
             eventTriggerToDisable = GetComponent<EventTrigger>();
