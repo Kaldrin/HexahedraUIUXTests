@@ -8,7 +8,7 @@ using UnityEngine;
 
 // Bastien BERNAND
 // Reusable asset
-// Last edited 07.10.2021
+// Last edited 20.10.2021
 
 /// <summary>
 /// Script to expose play animation functions from Animation components
@@ -19,6 +19,7 @@ using UnityEngine;
 public class PlayAnimation : MonoBehaviour
 {
     [SerializeField] List<Animation> animationComponentsToPLay = new List<Animation>();
+    [SerializeField] float durationToWaitBeforePlay = 0f;
 
 
 
@@ -30,6 +31,12 @@ public class PlayAnimation : MonoBehaviour
                     animationComponentsToPLay[i].enabled = state;
     }
 
+    public void PlayAfterDuration(string animationName) => StartCoroutine(PlayAfterDurationCoroutine(animationName));
+    IEnumerator PlayAfterDurationCoroutine(string animationName)
+    {
+        yield return new WaitForSecondsRealtime(durationToWaitBeforePlay);
+        Play(animationName);
+    }
     public void Play(string animationName)                                                                                                                  // PLAY
     {
         if (animationComponentsToPLay != null && animationComponentsToPLay.Count > 0)
